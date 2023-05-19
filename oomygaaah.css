@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Smokum&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anton', sans-serif;
+}
+body{
+    background-color: rgb(156, 129, 93);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    background-color: snow;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 35px rgba(0,0,0,0.2);
+}
+.container .esquerda{
+    position: relative;
+    background-color: rgb(238, 126, 126);
+    padding: 40px;
+}
+.perfilTexto{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(168, 48, 11, 0.5);
+    padding-bottom: 40px;
+}
+.perfilTexto .imgFoto{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.perfilTexto .imgFoto img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(85%);
+}
+.perfilTexto h2{
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.4em;
+}
+.perfilTexto h2 span{
+    font-size: 1em;
+    font-weight: 500;
+    font-family: 'Smokum', sans-serif;
+}
+.titulo{
+    font-family: 'Smokum', sans-serif;
+    font-size: 1.5em;
+    font-weight: 570;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+.Info{
+    padding-top: 40px;
+}
+.Info ul{
+    position: relative;
+}
+.Info ul li{
+    list-style: none;
+    position: relative;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.Info ul li .icone{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: rgb(133, 35, 0);
+}
+.Info.Educação li{
+    margin-bottom: 15px;
+}
+.Info.Educação h5{
+    color: rgb(133, 35, 0);
+    font-weight: 500;
+}
+.Info.Educação h4{
+    font-weight: 50;
+}
+.Info.Ling .porcento{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background-color: orangered;
+    display: block;
+    margin-top: 5px;
+}
+.Info.Ling .porcento div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgb(133, 35, 0);
+}
+
+.container .direita{
+    position: relative;
+    background-color: rgb(243, 212, 75);
+    padding: 40px;
+}
+.sobre{
+    margin-bottom: 50px;
+}
+.sobre:last-child{
+    margin-bottom: 0;
+}
+.titulo2{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-weight: 50;
+}
+p{
+    color: rgb(0, 0, 0);
+}
+.sobre .box{
+    display: flex;
+    margin: 20px 0;
+}
+.sobre .box .ano{
+    min-width: 150px;
+}
+.sobre .box .ano h5{
+    text-transform: uppercase;
+    color: rgb(165, 77, 42);
+    font-weight: 500;
+}
+.sobre .box .texto h4{
+    text-transform: uppercase;
+    color: rgb(192, 0, 0);
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.habilidades .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.habilidades .box h4{
+    text-transform: uppercase;
+    color: rgb(165, 77, 42);
+    font-weight: 500;
+}
+.habilidades .box .porcento{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: rgb(247, 133, 27);
+}
+.habilidades .box .porcento div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgb(167, 141, 25);
+}
+.interesse ul{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.interesse ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.interesse ul li .fa{
+    color: orangered;
+}
+@media (max-width: 1000px){
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .interesse ul{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 600px){
+    .sobre .box{
+        flex-direction: column;
+    }
+    .sobre .box .ano{
+        margin-bottom: 5px;
+    }
+    .interesse ul{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .habilidades .box{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
